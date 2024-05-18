@@ -24,9 +24,9 @@
 
     @endif
 
-    <form method="post" action="{{route('product.store')}}">
+    <form method="post" action="{{route('product.update', ['product' => $product])}}">
         @csrf
-        @method('post')
+        @method('put')
 
         <div>
             <label>Name</label>
@@ -46,7 +46,7 @@
         </div>
 
         <div>
-            <input type="submit" value="Save a New Product">
+            <input type="submit" value="Update">
         </div>
     </form>
 
